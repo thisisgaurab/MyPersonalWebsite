@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Personal Portfolio Website</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="gaurab">
+      <nav>
+        <img src="img/pp.jpg" class="logo" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="achievements.html">Achievements</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <section class="content">
+        <h1>
+          Hello, I’m
+          <article>Gaurab Upreti</article>
+        </h1>
+        <br /><br />
+        <p>
+          I am a sophomore international student at NKU majoring in Computer
+          Science and minoring in Mathematics.
+        </p>
+        <br /><br />
+        <a href="#" class="btn">Download Resume</a>
+      </section>
+    </section>
+  </body>
+  <script>
+    var downloadButtons = document.getElementsByClassName("btn");
+    for (var i = 0; i < downloadButtons.length; i++) {
+      if (downloadButtons[i].innerHTML === "Download Resume") {
+        downloadButtons[i].addEventListener("click", function () {
+          var link = document.createElement("a");
+          link.href = "MyResume.pdf";
+          link.download = "MyResume.pdf";
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        });
+      }
+    }
+  </script>
+
+  <section class="footer">
+    <section class="socialmedia">
+      <section>
+        <a href="https://www.facebook.com/">
+          <i class="fab fa-facebook fa-2x logo"></i>
+        </a>
+      </section>
+
+      <section>
+        <a href="https://www.instagram.com/">
+          <i class="fab fa-instagram fa-2x logo"></i>
+        </a>
+      </section>
+      <section>
+        <a href="https://twitter.com/">
+          <i class="fab fa-twitter fa-2x logo"></i>
+        </a>
+      </section>
+    </section>
+
+    <section class="row">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="skills.html">Skills </a></li>
+
+        <li><a href="hobbies.html">Hobbies </a></li>
+
+        <li><a href="contacts.html">Contact </a></li>
+      </ul>
+    </section>
+
+    <section class="row">
+      Copyright © 2023 Gaurab Upreti - All rights reserved
+    </section>
+  </section>
+</html>
